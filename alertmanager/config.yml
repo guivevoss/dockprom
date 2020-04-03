@@ -1,0 +1,14 @@
+route:
+  receiver: "slack"
+
+receivers:
+  - name: "slack"
+    slack_configs:
+      - send_resolved: true
+        text: "{{ .CommonAnnotations.description }}"
+        # username: "Prometheus"
+        username: "Alerte_ordinateur_adrien"
+        # channel: "#<channel-name>"
+        channel: alertes
+        # api_url: "https://hooks.slack.com/services/<webhook-id>"
+        api_url: https://hooks.slack.com/services/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
